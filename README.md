@@ -19,10 +19,9 @@
 
 ### کروم
 
-- کد افزونه رو دانلود کنید.
+- کد افزونه رو دانلود کنید. [دریافت کد](https://github.com/mimvahedi/blog-tools/archive/refs/heads/master.zip)
 - اون رو از حالت فشرده خارج کنید
 - به تنظیمات مرورگر برید
 - تیک گزینه حالت توسعه‌دهنده رو فعال کنید
 - روی دکمهٔ Load unpacked کلیک کنید
 - فایل manifest.json رو از پوشهٔ افزونه انتخاب کنید
-[دریافت کد](https://github.com/mimvahedi/blog-tools/archive/refs/heads/master.zip)
