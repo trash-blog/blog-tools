@@ -1,0 +1,72 @@
+.trash-rate-down {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  background: red;
+  line-height: 1;
+  padding: 0.5em;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 4px solid #0006;
+}
+.trash-rate-down::after {
+  content: "مخالف";
+}
+.trash-rate-down:hover {
+  background: #bc0000;
+}
+.trash-bcomform {
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  gap: 10px;
+  position: fixed;
+  left: 10px;
+  bottom: 50px;
+  width: 400px;
+  max-width: 90%;
+  background: #efeffa;
+  padding: 10px;
+  color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.send-coments-wrapper {
+  line-height: 1;
+  padding: 1em;
+}
+
+.trash-bcomform {
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  gap: 10px;
+  position: fixed;
+  left: 10px;
+  bottom: 50px;
+  width: 400px;
+  max-width: 90%;
+  background: #efeffa;
+  padding: 10px;
+  color: #222;
+}
+.trash-bcomform__post {
+  background: #0084ff22;
+  color: #0084ff;
+  border-radius: 8px;
+  line-height: 1.5;
+  padding: 2.5px 10px;
+  cursor: pointer;
+}
+.trash-bcomform#bComFormElem {
+  position: static;
+  max-width: unset;
+  width: 100%;
+  padding: 0;
+}
+.trash-bcomform__header {
+  margin: -10px -10px 0 -10px;
+  padding: 10px;
+  background: rebeccapurple;
+  color: #fff;
+}

@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  width: 300px;
+  max-width: 100vw;
+}
+body {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  background: #efeffa;
+  color: #222;
+  font-family: vazirmatn;
+  font-family: sahel;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  font-size: 1.25em;
+  vertical-align: middle;
+}
+a{
+  color: #0084ff;
+  text-decoration: none;
+}
+.grey {
+  --background: rgb(190, 190, 190);
+}
+
+.green {
+  --background: rgb(40, 128, 40);
+}
+
+.yellow {
+  --background: rgb(255, 205, 40);
+}
+
+.red {
+  --background: rgb(255, 40, 40);
+}
+
+.btn {
+  color: #fff;
+  background: #0084ff22;
+  color: #0084ff;
+  padding: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  line-height: 1em;
+  min-width: 3em;
+  margin-bottom: .5rem;
+  width: 100%;
+  transition: 250ms ease;
+  font-family: inherit;
+}
+.btn:hover{
+  background: #0084ff44;
+}
+.btn:focus {
+  transform: scale(0.95);
+}
+.dialog-wrp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6666666667);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 250ms ease;
+  padding: 1rem;
+}
+.dialog-wrp.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.dialog-wrp.toast {
+  width: 50rem;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.dialog {
+  background: #282828;
+  color: #ccc;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.5333333333);
+  transition: 250ms ease;
+  width: 30rem;
+  max-width: 100%;
+  position: relative;
+}
+.dialog > h1 {
+  margin: 0;
+}
+.dialog > p {
+  margin: 0 0 2rem;
+}
+
+.x {
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.1333333333);
+  line-height: 1em;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+}
+
+.ext-title{
+  margin: 0;
+  font-size: 1.5rem;
+}
+.ext-wrp{
+  flex-grow: 1;
+  padding: 1rem 0;
+}
+/*# sourceMappingURL=style.css.map */
+

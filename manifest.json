@@ -1,0 +1,42 @@
+{
+  "description": "Some tools for blog.ir",
+  "manifest_version": 2,
+  "name": "Blog Tools",
+  "version": "0.4",
+  "homepage_url": "https://trash.blog.ir/post/extention",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+  "permissions": ["activeTab"],
+
+  "browser_action": {
+    "default_icon": "./icons/icon.svg",
+    "default_title": "Blog Tools",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://blog.ir/*"],
+      "js": ["./inject/addviewportMeta.js"]
+    },
+    {
+      "matches": ["*://blog.ir/changes"],
+      "js": ["./inject/removeAds.js"]
+    },
+    {
+      "matches": ["*://blog.ir/panel/*/followed_blogs*"],
+      "js": ["./inject/uneadTop.js", "./inject/saveAsOpml.js"],
+      "css": ["./inject/uneadTop.css"]
+    },
+    {
+      "matches": ["*://blog.ir/panel/*/comments*"],
+      "js": ["./inject/commentReply.js"]
+    },
+    {
+      "matches": ["*://blog.ir/panel/*"],
+      "js": ["./inject/changePageTitle.js"]
+    }
+  ]
+}
