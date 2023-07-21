@@ -2,7 +2,7 @@
   "description": "Some tools for blog.ir",
   "manifest_version": 2,
   "name": "Blog Tools",
-  "version": "0.5",
+  "version": "0.5.1",
   "homepage_url": "https://trash.blog.ir/post/extention",
 
   "icons": {
