@@ -1,3 +1,4 @@
+window.browser = browser || chrome
 browser.webRequest.onHeadersReceived.addListener(
   (data) => {
 
