@@ -16,6 +16,10 @@
     "https://bayanbox.ir/*"
   ],
 
+  "web_accessible_resources": [
+    "inject/adlist.json"
+  ],
+
   "browser_action": {
     "default_icon": "./icons/icon.svg",
     "default_title": "Blog Tools",
