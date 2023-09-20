@@ -1,24 +1,16 @@
-(function () {
-  fetch(chrome.runtime.getURL('./inject/adlist.json'))
-    .then((resp) => resp.json())
-    .then(function (adList) {
-      let adWords = adList["adWords"];
-      let kpopWords = adList["kpopWords"];
-      let kpopGroups = adList["kpopGroups"];
-      let KpopArtists = adList["KpopArtists"];
+window.browser = browser || chrome
 
-      let badWords = Array.prototype.concat(adWords, kpopWords, kpopGroups, KpopArtists);
-
-      function remove() {
-        for (let a of document.querySelectorAll(".post,.postside")) {
-          for (w of badWords) {
-            if (a.innerText.toLowerCase().includes(w)) {
-              a.style.display = "none";
-              break;
-            }
+  (async () => {
+    let resp = await fetch(browser.runtime.getURL('./inject/adlist.json'))
+    let adList = await resp.json()
+    let badWords = [].concat(...Object.values(adList));
+      for (let a of document.querySelectorAll(".post")) {
+        for (let w of badWords) {
+          if (a.innerText.toLowerCase().includes(w)) {
+            a.style.display = "none";
+            break;
           }
         }
       }
-      remove();
-    });
-})();
+    ;
+  })();
