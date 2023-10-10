@@ -9,8 +9,11 @@
   font-weight: bold;
   border-bottom: 4px solid #0006;
 }
-.trash-rate-down::after {
+.trash-rate-down::before {
   content: "مخالف";
+}
+.trash-rate-down::after {
+  content: attr(data-text);
 }
 .trash-rate-down:hover {
   background: #bc0000;
