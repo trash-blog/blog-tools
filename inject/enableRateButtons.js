@@ -4,8 +4,7 @@ let script = `let rateUp = document.querySelector(
 let rateDown = document.querySelector(
   "a[href^='/process/rate_post/'][href$='1']"
 );
-//rateUp && !rateDown
-if (true) {
+if (rateUp && !rateDown) {
   let a = document.createElement("a");
   let url = rateUp.href.slice(NaN, -1) + "1";
   a.classList.add("trash-rate-down");
