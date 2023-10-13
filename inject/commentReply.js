@@ -52,4 +52,4 @@ document.querySelectorAll(".toggleReply").forEach((btn) => {
 `
 let meta = document.body.appendChild(document.createElement("script"));
 meta.type = "text/javascript";
-meta.innerHTML = script;
+meta.innerText = script;
