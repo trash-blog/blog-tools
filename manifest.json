@@ -50,6 +50,10 @@
     {
       "matches": ["*://bayanbox.ir/info/*"],
       "js": ["./inject/bayanboxCopyLink.js"]
+    },
+    {
+      "matches": ["*://blog.ir/panel/trash/post_edit*"],
+      "js": ["./inject/securePreview.js"]
     }
   ],
   "background": {

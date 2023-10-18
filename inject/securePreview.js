@@ -1,0 +1,1 @@
+document.querySelector("#post_add_form").action = document.querySelector("#post_add_form").action.replace("http://", "https://")
