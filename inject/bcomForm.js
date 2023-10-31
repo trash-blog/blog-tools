@@ -9,22 +9,17 @@ document.body.appendChild(app);
 let bcomform = (id) => {
   let html = `
 <form class="bComForm trash-bComForm" id="bComFormElem" action="/process/comment_add/${id}" method="post">
-                <input placeholder="نام *" type="text" class="text" name="fullname" value="">
-                <input placeholder="پست الکترونيک" type="text" class="text ltr" name="email" value="">
-                <input placeholder="سایت یا وبلاگ" type="text" class="text ltr" name="website" value="">
-                <textarea placeholder="پیام *" name="comment" cols="60" rows="8"></textarea>
-            	 <input type="hidden" id="commentJsEnabled" name="settings_WITH_JS" value="">
-        	     <input type="hidden" id="commentJsError" name="commentJsError" value="">
+              <input placeholder="نام *" type="text" class="text" name="fullname" value="">
+              <input placeholder="پست الکترونيک" type="text" class="text ltr" name="email" value="">
+              <input placeholder="سایت یا وبلاگ" type="text" class="text ltr" name="website" value="">
+              <textarea placeholder="پیام *" name="comment" cols="60" rows="8"></textarea>
+            	<input type="hidden" id="commentJsEnabled" name="settings_WITH_JS" value="">
+        	    <input type="hidden" id="commentJsError" name="commentJsError" value="">
+              <input type="hidden" name="hide_mail" value="1">
               <div>
                   <input id="frm_isprivate" type="checkbox" name="status" value="private" checked="true">
                   <label for="frm_isprivate">خصوصی</label>
               </div>
-          <div>
-              <input id="frm_hide_mail" type="checkbox" name="hide_mail" value="0">
-              <input type="hidden" name="hide_mail" value="1">
-              <label for="frm_hide_mail">پست الکترونیک برای عموم قابل مشاهده باشد</label>
-              <a href="#" class="smalltip" id="frmHideMailSpam" style="display:none">اخطار!</a>
-          </div>
   <div class="formField2">
       <input type="submit" id="bComSub" class="sendbutton hasCheckbox" value="ارسال">
   </div>
