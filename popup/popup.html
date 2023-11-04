@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
-  <head>
-    <script defer src="popup.js"></script>
-    <link rel="stylesheet" href="popup.css" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta charset="UTF-8" />
-    <title>افزونهٔ وبلاک</title>
-  </head>
-  <body class="wrp">
-    <h1 class="ext-title">افزونه بلاگ بیان</h1>
-    <div class="ext-wrp">
-      <button class="btn" id="showAds">نمایش تبلیغات</button>
-      <button class="btn" id="toggleLike">افزودن دکمه‌ٔ مخالف</button>
-      <button class="btn" id="toggleComment">افزودن فرم نظر</button>
-      <button class="btn" id="follow">دنبال کردن</button>
-      <p>بقیهٔ امکانات خود‌به‌خود اجرا میشن و به دکمه نیازی ندارن</p>
-      <p>
-    <a href="https://trash.blog.ir/post/extention">راهنمای افزونه</a>
-      </p>
-    </div>
-  </body>
+
+<head>
+  <script defer src="popup.js"></script>
+  <link rel="stylesheet" href="popup.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>افزونهٔ وبلاگ</title>
+</head>
+
+<body class="wrp">
+  <div class="ext-wrp">
+    <button class="btn" id="toggleLike">
+      <svg class="icon" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M32,48H80a0,0,0,0,1,0,0V152a0,0,0,0,1,0,0H32a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8Z" class="icon-path"/><path d="M80,152l40,80a32,32,0,0,0,32-32V176h64a16,16,0,0,0,15.87-18l-12-96A16,16,0,0,0,204,48H80" class="icon-path"/></svg>
+    </button>
+    <button class="btn" id="toggleComment">
+      <svg class="icon" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M45.15,230.11A8,8,0,0,1,32,224V64a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V192a8,8,0,0,1-8,8H82.5a8,8,0,0,0-5.15,1.88Z" class="icon-path"/><line x1="96" y1="112" x2="160" y2="112" class="icon-path"/><line x1="96" y1="144" x2="160" y2="144" class="icon-path"/></svg>
+    </button>
+    <button class="btn" id="follow">
+      <svg class="icon" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><rect x="40" y="40" width="176" height="176" rx="8" class="icon-path"/><line x1="88" y1="128" x2="168" y2="128" class="icon-path"/><line x1="128" y1="88" x2="128" y2="168" class="icon-path"/></svg>    </button>
+    <a href="https://trash.blog.ir/post/extention" class="btn" id="follow">
+      <svg class="icon" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><circle cx="128" cy="180" r="12" fill="currentColor"/><path d="M128,144v-8c17.67,0,32-12.54,32-28s-14.33-28-32-28S96,92.54,96,108v4" class="icon-path"/><circle cx="128" cy="128" r="96" class="icon-path"/></svg>
+    </a>
+  </div>
+</body>
+
 </html>

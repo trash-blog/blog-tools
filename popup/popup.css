@@ -2,140 +2,69 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 300px;
-  margin: 0;
-  background: #efeffa;
-  color: #222;
-  font-family: vazirmatn;
-  font-family: sahel;
+@font-face {
+  font-family: "vazirmatn";
+  font-weight: 100 900;
+  src: url("./Vazirmatn[wght].woff2");
 }
 
 body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 12rem;
+  margin: 0;
+  color: #dfdffa;
+  background: #14181f;
+  --font: vazirmatn;
+  font-family: var(--font), system-ui;
+  text-align: center;
   flex-direction: column;
-  padding: 1rem;
+  padding: .5rem;
 }
-.icon {
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  font-size: 1.25em;
-  vertical-align: middle;
-}
-a{
-  color: #0084ff;
+a {
+  color: #00a19d;
   text-decoration: none;
 }
-.grey {
-  --background: rgb(190, 190, 190);
-}
-
-.green {
-  --background: rgb(40, 128, 40);
-}
-
-.yellow {
-  --background: rgb(255, 205, 40);
-}
-
-.red {
-  --background: rgb(255, 40, 40);
+.ext-wrp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
 }
 
 .btn {
   color: #fff;
-  background: #0084ff22;
-  color: #0084ff;
-  padding: 1em;
-  font-weight: bold;
-  border: none;
-  border-radius: 0.5rem;
+  background: linear-gradient(to bottom, #00a3a0, #01817f);
+  padding: .25em;
+  margin: 0;
+  font: bold 1rem / 1 var(--font);
   text-align: center;
   display: inline-block;
+  box-shadow: inset 0 8px 4px -6px #fff;
+  border: 2px solid #0001;
+  border-radius: 50%;
   user-select: none;
   cursor: pointer;
-  line-height: 1em;
-  min-width: 3em;
-  margin-bottom: .5rem;
-  width: 100%;
+  line-height: 1;
+  --w: 2.5em;
+  min-width: var(--w);
+  width:var(--w);
+  height: var(--w);
   transition: 250ms ease;
-  font-family: inherit;
 }
-.btn:hover{
-  background: #0084ff44;
+.btn:hover,.btn:focus {
+  opacity: 0.75;
 }
-.btn:focus {
+.btn:active {
   transform: scale(0.95);
 }
-.dialog-wrp {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6666666667);
-  backdrop-filter: blur(2px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: 250ms ease;
-  padding: 1rem;
+.icon {
+  width: 1em;
+  height: 1em;
+  font-size: 1.5em;
+  vertical-align: middle;
 }
-.dialog-wrp.hide {
-  opacity: 0;
-  pointer-events: none;
+.icon-path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 16;
 }
-.dialog-wrp.toast {
-  width: 50rem;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background: transparent;
-  backdrop-filter: none;
-}
-
-.dialog {
-  background: #282828;
-  color: #ccc;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.5333333333);
-  transition: 250ms ease;
-  width: 30rem;
-  max-width: 100%;
-  position: relative;
-}
-.dialog > h1 {
-  margin: 0;
-}
-.dialog > p {
-  margin: 0 0 2rem;
-}
-
-.x {
-  position: absolute;
-  left: 0.25em;
-  top: 0.25em;
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.1333333333);
-  line-height: 1em;
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  text-align: center;
-}
-
-.ext-title{
-  margin: 0;
-  font-size: 1.5rem;
-}
-.ext-wrp{
-  flex-grow: 1;
-  padding: 1rem 0;
-}
-/*# sourceMappingURL=style.css.map */
-
