@@ -18,12 +18,6 @@ document.querySelector("#toggleComment").onclick = () => {
   });
 };
 
-document.querySelector("#showAds").onclick = () => {
-  browser.tabs.insertCSS({
-    code: `.post[style] {display: var(--display, block) !important;--theme-color: red;}`,
-  });
-};
-
 async function getCurrentTab() {
   let [tab] = await browser.tabs.query({ active: true, lastFocusedWindow: true });
   return tab;
@@ -36,6 +30,4 @@ async function getCurrentTab() {
       url: `https://blog.ir/panel/-/followed_blogs?follow=${url.host}`
     })
   })
-  if (url.href !== "https://blog.ir/changes")
-    document.querySelector("#showAds").style.display = "none"
 })()
