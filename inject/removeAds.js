@@ -10,6 +10,7 @@ fetch(browser.runtime.getURL('./inject/adlist.json'))
       for (let w of badWords) {
         if (a.innerText.toLowerCase().includes(w)) {
           ++adsLength;
+          a.querySelector(".smalltip").textContent += `(${w})`
           a.style.display = "none";
           break;
         }
