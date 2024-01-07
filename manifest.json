@@ -22,8 +22,7 @@
 
   "browser_action": {
     "default_icon": "./icons/icon.svg",
-    "default_title": "Blog Tools",
-    "default_popup": "popup/popup.html"
+    "default_title": "Blog Tools"
   },
   "content_scripts": [
     {
@@ -41,7 +40,7 @@
     },
     {
       "matches": ["*://blog.ir/panel/*/comments*"],
-      "js": ["./inject/commentReply.js"]
+      "js": ["./inject/commentReplyLoad.js"]
     },
     {
       "matches": ["*://blog.ir/panel/*"],
@@ -57,6 +56,6 @@
     }
   ],
   "background": {
-    "scripts": ["./background/bayanboxFixer.js"]
+    "scripts": ["./background/bayanboxFixer.js","./background/background.js"]
   }
 }
