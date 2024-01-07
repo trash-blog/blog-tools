@@ -1,4 +1,3 @@
-let script = `
 document.querySelectorAll(".toggleReply").forEach((btn) => {
   let cmid = btn.parentNode.parentNode.parentNode.dataset.did;
 
@@ -49,7 +48,3 @@ document.querySelectorAll(".toggleReply").forEach((btn) => {
 
   };
 });
-`
-let meta = document.body.appendChild(document.createElement("script"));
-meta.type = "text/javascript";
-meta.innerText = script;
