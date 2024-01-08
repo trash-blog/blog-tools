@@ -1,36 +1,16 @@
-.trash-rate-down {
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
-  background: red;
-  line-height: 1;
-  padding: 0.5em;
-  color: #fff;
-  font-weight: bold;
-  border-bottom: 4px solid #0006;
-}
-.trash-rate-down::before {
-  content: "مخالف";
-}
-.trash-rate-down::after {
-  content: attr(data-text);
-}
-.trash-rate-down:hover {
-  background: #bc0000;
-}
 .trash-bcomform {
   display: flex;
   flex-direction: column;
   direction: rtl;
   gap: 10px;
   position: fixed;
-  left: 10px;
-  bottom: 50px;
+  left: 5rem;
+  bottom: 1rem;
   width: 400px;
   max-width: 90%;
-  background: #efeffa;
+  background: #222;
   padding: 10px;
-  color: #222;
+  color: #efeffa;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -39,20 +19,6 @@
   padding: 1em;
 }
 
-.trash-bcomform {
-  display: flex;
-  flex-direction: column;
-  direction: rtl;
-  gap: 10px;
-  position: fixed;
-  left: 10px;
-  bottom: 50px;
-  width: 400px;
-  max-width: 90%;
-  background: #efeffa;
-  padding: 10px;
-  color: #222;
-}
 .trash-bcomform__post {
   background: #0084ff22;
   color: #0084ff;
@@ -70,6 +36,22 @@
 .trash-bcomform__header {
   margin: -10px -10px 0 -10px;
   padding: 10px;
-  background: rebeccapurple;
+  background: #018d8b;
+  color: #fff;
+  box-shadow: inset 0 8px 4px -6px #fff;
+  border: 1px solid transparent;
+  border-radius: 8px 8px 0 0;
+}
+.trash-bcomform input.text,
+.trash-bcomform textarea {
+  margin-bottom: 0.5rem;
+  border-radius: 0.5em;
+  border: none;
+  padding: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(#444, #333);
+  border: 2px solid #0000;
+  box-shadow: inset 0px 5px 15px -11px #fff, 0 5px 10px -7px #000;
   color: #fff;
 }
