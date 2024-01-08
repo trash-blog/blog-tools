@@ -1,1 +1,3 @@
-document.querySelectorAll(".unread").forEach(img => img.parentNode.parentNode.parentNode.parentNode.classList.add("unread"));
+document.querySelectorAll(".followItem").forEach(x => {
+    if (x.querySelector("img.unread")) x.classList.add("unread")
+})
