@@ -2,8 +2,14 @@
   "description": "Some tools for blog.ir",
   "manifest_version": 2,
   "name": "Blog Tools",
-  "version": "0.5.2",
+  "version": "0.6",
   "homepage_url": "https://trash.blog.ir/post/extention",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{57857ca0-dd2a-4b53-9147-0de33c793888}"
+    }
+  },
 
   "icons": {
     "48": "icons/icon-48.png"
@@ -16,9 +22,7 @@
     "https://bayanbox.ir/*"
   ],
 
-  "web_accessible_resources": [
-    "inject/adlist.json"
-  ],
+  "web_accessible_resources": ["inject/adlist.json"],
 
   "browser_action": {
     "default_icon": "./icons/icon.svg",
@@ -56,6 +60,6 @@
     }
   ],
   "background": {
-    "scripts": ["./background/bayanboxFixer.js","./background/background.js"]
+    "scripts": ["./background/bayanboxFixer.js", "./background/background.js"]
   }
 }
