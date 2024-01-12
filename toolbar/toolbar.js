@@ -5,8 +5,10 @@ let buttons = []
 
 let toolbar = document.createElement("div")
 toolbar.classList.add("toolbar")
-document.body.prepend(toolbar)
 
+if (isBlog) {
+    document.body.prepend(toolbar)
+}
 
 
 if (document.querySelector("a[href^='/process/rate_post/'][href$='2']") && !(document.querySelector("a[href^='/process/rate_post/'][href$='1']"))) {
