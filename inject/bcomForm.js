@@ -1,8 +1,11 @@
 let app = document.createElement("div");
 app.classList.add("trash-bcomform");
-app.innerHTML = `<header class="trash-bcomform__header">در حال دریافت rss</header>`
-
-;
+app.innerHTML = `<header id="trash-header-wrapper">
+  <div class="trash-header-text">در حال دریافت rss</div>
+  <div class="trash-header-btn">بازگشت</div>
+</header>
+<div id="trash-form-wrapper"></div>
+<div id="trash-post-wrapper"></div>`;
 
 document.body.appendChild(app);
 
@@ -26,35 +29,40 @@ let bcomform = (id) => {
   <div style="clear:both"></div>
   </form>
 `;
-  app.innerHTML = html;
+  app.querySelector("#trash-form-wrapper").innerHTML = html;
+  app.classList.add("active-form")
 };
-async function findId() {
-  let rateBtn = document.querySelector("a[href^='/process/rate_post/']");
-  if (rateBtn) {
-    return rateBtn.href.split(new RegExp("[/]+"))[4];
-  }
-}
+
+app.querySelector(".trash-header-btn").addEventListener("click", () => {
+  app.classList.remove("active-form")
+  app.querySelector(".trash-header-text").textContent = "مطلب موردنظر رو انتخاب کنید";
+})
+
 let fetchRss = async () => {
-  let d = await fetch(window.location.origin + "/rss");
-  let e = await d.text();
-  return e;
+  try {
+    let d = await fetch(window.location.origin + "/rss");
+    let e = await d.text();
+    return e;
+  } catch (e) {
+    app.querySelector(".trash-header-text").textContent = "خطا هنام دریافت rss"
+  }
 };
 
 fetchRss().then((rss) => {
   let parser = new DOMParser();
   let code = parser.parseFromString(rss, "text/xml");
-  app.querySelector(".trash-bcomform__header").innerHTML = "مطلبی که می‌خواید نظر بفرستید رو انتخاب کنید";
+  app.querySelector(".trash-header-text").textContent = "مطلب موردنظر رو انتخاب کنید";
   for (let item of code.querySelectorAll("item")) {
     let post = document.createElement("div");
-    let postTitle = item.querySelector("title").innerHTML;
+    let postTitle = item.querySelector("title").textContent;
     let postId = item.querySelector("guid").innerHTML.split("/").reverse()[0];
-    post.classList.add("trash-bcomform__post");
+    post.classList.add("trash-form__post");
     post.setAttribute("data-id", postId);
     post.textContent = postTitle;
     post.onclick = () => {
-      app.querySelector(".trash-bcomform__header").textContent = `ارسال نطر به: ${postTitle}`;
+      app.querySelector(".trash-header-text").textContent = `ارسال نظر به: ${postTitle}`;
       bcomform(postId);
     };
-    app.appendChild(post);
+    app.querySelector("#trash-post-wrapper").appendChild(post);
   }
 });
