@@ -43,7 +43,7 @@ class RateElement extends HTMLElement {
         e.preventDefault()
         this.send_xhr(url,
           (req) => {
-            const [upRates, downRates] = eval("(" + req.responseText + ")");
+            const [upRates, downRates] = JSON.parse("(" + req.responseText + ")");
             a.dataset.text = " (" + downRates + ")";
           },
           (req) => {
@@ -68,3 +68,5 @@ class RateElement extends HTMLElement {
       4 != request.readyState && request.send(null);
   }
 }
+
+window.customElements.define("rate-box", RateElement);

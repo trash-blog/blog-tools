@@ -27,7 +27,7 @@ function getOpml() {
     return `<outline htmlUrl="https://${url}" title="${title}" type="rss" version="RSS2" xmlUrl="https://${url}/rss/" />`;
   };
 
-  for (blog in list) {
+  for (let blog in list) {
     body += outline(blog, list[blog]);
   }
 
