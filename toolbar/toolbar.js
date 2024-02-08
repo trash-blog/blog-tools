@@ -1,4 +1,6 @@
-window.customElements.define("rate-box", RateElement);
+window.browser = (function () {
+    return window.msBrowser || window.browser || window.chrome;
+  })();
 
 let isBlog = document.querySelector("meta[name=generator]").content === "blog.ir"
 let buttons = []

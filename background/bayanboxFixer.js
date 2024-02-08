@@ -1,4 +1,7 @@
-window.browser = browser || chrome
+window.browser = (function () {
+  return window.msBrowser || window.browser || window.chrome;
+})();
+
 browser.webRequest.onHeadersReceived.addListener(
   (data) => {
 

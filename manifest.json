@@ -22,7 +22,7 @@
     "https://bayanbox.ir/*"
   ],
 
-  "web_accessible_resources": ["inject/adlist.json"],
+  "web_accessible_resources": ["inject/*"],
 
   "browser_action": {
     "default_icon": "./icons/icon.svg",

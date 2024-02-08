@@ -1,4 +1,7 @@
-
+window.browser = (function () {
+    return window.msBrowser || window.browser || window.chrome;
+  })();
+  
 function injectScript(src) {
     let el = document.body.appendChild(document.createElement("script"));
     el.type = "text/javascript";
